@@ -54,6 +54,8 @@ export const uk = {
   'nav.schedule.full': 'Розклад занять',
   'nav.grades': 'Оцінки',
   'nav.grades.full': 'Заліковка та бали',
+  'nav.opportunities': 'Можливості',
+  'nav.opportunities.full': 'Можливості та проекти',
 
   // Sidebar & Header
   'sidebar.logout': 'Вийти',

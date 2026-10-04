@@ -56,6 +56,8 @@ export const en = {
   'nav.schedule.full': 'Class Schedule',
   'nav.grades': 'Grades',
   'nav.grades.full': 'Gradebook & Scores',
+  'nav.opportunities': 'Opportunities',
+  'nav.opportunities.full': 'Opportunities & Projects',
 
   // Sidebar & Header
   'sidebar.logout': 'Log out',

@@ -25,6 +25,7 @@ import {
   CoursesTab,
   GradesTab,
   AssignmentsTab,
+  OpportunitiesTab,
 } from './dashboard';
 import { formatLastSync } from './dashboard/tabs/helpers';
 import { useDashboardData, clearUserSessionStorage } from './dashboard/hooks/useDashboardData';
@@ -38,6 +39,7 @@ const PAGE_TITLE_KEYS: Record<NavKey, TranslationKey> = {
   grades: 'nav.grades.full',
   schedule: 'nav.schedule.full',
   assignments: 'nav.assignments.full',
+  opportunities: 'nav.opportunities.full',
 };
 
 const DashboardPage: React.FC = () => {
@@ -204,6 +206,8 @@ const DashboardPage: React.FC = () => {
             }}
           />
         );
+      case 'opportunities':
+        return <OpportunitiesTab soundEnabled={soundEnabled} />;
       default:
         return null;
     }
