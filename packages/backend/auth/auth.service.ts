@@ -77,6 +77,7 @@ export class AuthService {
       user.email,
       user.token ?? undefined,
       user.moodleId ?? undefined,
+      user.role,
     );
 
     await this.updateRtHash(user.id, tokens.refresh_token);
@@ -133,6 +134,7 @@ export class AuthService {
       user.email,
       moodleToken,
       moodleId,
+      user.role,
     );
 
     await this.updateRtHash(user.id, tokens.refresh_token);
@@ -151,6 +153,7 @@ export class AuthService {
       user.email,
       user.token ?? undefined,
       user.moodleId ?? undefined,
+      user.role,
     );
 
     await this.updateRtHash(user.id, tokens.refresh_token);
@@ -280,6 +283,7 @@ export class AuthService {
       updatedUser.email,
       moodleToken,
       moodleId,
+      updatedUser.role,
     );
 
     await this.updateRtHash(updatedUser.id, tokens.refresh_token);
@@ -312,6 +316,8 @@ export class AuthService {
       user.id,
       user.email,
       user.token ?? undefined,
+      undefined,
+      user.role,
     );
 
     await this.updateRtHash(user.id, tokens.refresh_token);
@@ -334,6 +340,7 @@ export class AuthService {
     email: string,
     moodleToken?: string,
     moodleId?: string,
+    role?: string,
   ) {
     const atSecret = process.env.AT_SECRET;
     const rtSecret = process.env.RT_SECRET;
@@ -360,6 +367,7 @@ export class AuthService {
           email,
           moodleToken,
           moodleId,
+          role,
         },
         {
           secret: atSecret,
